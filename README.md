@@ -1,16 +1,17 @@
-# React + Vite
+# Project Name:
+KinKeeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## A Short Description
 
-Currently, two official plugins are available:
+KinKeeper is a friend management web application built with JavaScript and React. It helps users store and organize friends' information in one place with a clean and user-friendly interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technology:
+1.React.js
+2.React Router
+3.Tailwind CSS
+4.Rechart
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Features
+1.Add, edit, and manage friends' information easily.
+2.Search and organize friend details in one dashboard.
+3.Responsive design with interactive charts and modern U
