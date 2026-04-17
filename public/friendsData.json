@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "picture": "/Products/John.jpg",
+    "email": "john@example.com",
+    "days_since_contact": 12,
+    "status": "Overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met in university and still plan hiking trips together every summer.",
+    "goal": 14,
+    "next_due_date": "April 18, 2026"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Kim",
+    "picture": "/Products/Sarah.jpg",
+    "email": "sarah.kim@example.com",
+    "days_since_contact": 6,
+    "status": "On-Track",
+    "tags": ["coworker", "design"],
+    "bio": "Worked together on a product launch. Great source of UX insights.",
+    "goal": 6,
+    "next_due_date": "April 24, 2026"
+  },
+  {
+    "id": 3,
+    "name": "Michael Torres",
+    "picture": "/Products/Michael.jpg",
+    "email": "michael.torres@example.com",
+    "days_since_contact": 13,
+    "status": "Almost Due",
+    "tags": ["gym", "neighbor"],
+    "bio": "Lives nearby and often joins morning workout sessions.",
+    "goal": 27,
+    "next_due_date": "April 17,2026"
+  },
+  {
+    "id": 4,
+    "name": "Priya Nair",
+    "picture": "/Products/Priya.jpg",
+    "email": "priya.nair@example.com",
+    "days_since_contact": 21,
+    "status": "Overdue",
+    "tags": ["mentor", "career"],
+    "bio": "Former manager who gives valuable career advice and leadership tips.",
+    "goal": 9,
+    "next_due_date": "Feb 27, 2026"
+  },
+  {
+    "id": 5,
+    "name": "David Chen",
+    "picture": "/Products/David.jpg",
+    "email": "david.chen@example.com",
+    "days_since_contact": 3,
+    "status": "On-Track",
+    "tags": ["startup", "friend"],
+    "bio": "Building a SaaS company and enjoys discussing growth strategies.",
+    "goal": 10,
+    "next_due_date": "Jan 23,2026"
+  },
+  {
+    "id": 6,
+    "name": "Emma Rodriguez",
+    "picture": "/Products/Emma.jpg",
+    "email": "emma.rodriguez@example.com",
+    "days_since_contact": 14,
+    "status": "Almost Due",
+    "tags": ["book club", "friend"],
+    "bio": "Met through a local book club and shares great fiction recommendations.",
+    "goal": 15,
+    "next_due_date": "Dec 27, 2026"
+  },
+  {
+    "id": 7,
+    "name": "Noah Patel",
+    "picture": "/Products/Noah.jpg",
+    "email": "noah.patel@example.com",
+    "days_since_contact": 28,
+    "status": "Overdue",
+    "tags": ["family", "cousin"],
+    "bio": "Cousin living abroad. We usually catch up on family milestones.",
+    "goal": 25,
+    "next_due_date": "Mar 3, 2026"
+  },
+  {
+    "id": 8,
+    "name": "Lisa Morgan",
+    "picture": "/Products/Lisa.jpg",
+    "email": "lisa.morgan@example.com",
+    "days_since_contact": 8,
+    "status": "On-Track",
+    "tags": ["volunteer", "community"],
+    "bio": "Organizes weekend food drives and local charity events.",
+    "goal": 20,
+    "next_due_date": "June 15, 2026"
+  },
+  {
+    "id": 9,
+    "name": "Ahmed Hassan",
+    "picture": "/Products/Ahmed.jpg",
+    "email": "ahmed.hassan@example.com",
+    "days_since_contact": 13,
+    "status": "Almost Due",
+    "tags": ["developer", "networking"],
+    "bio": "Met at a tech meetup and often exchanges coding resources.",
+    "goal": 30,
+    "next_due_date": "May 30,2026"
+  },
+  {
+    "id": 10,
+    "name": "Olivia Bennett",
+    "picture": "/Products/Olivia.jpg",
+    "email": "olivia.bennett@example.com",
+    "days_since_contact": 2,
+    "status": "On-Track",
+    "tags": ["travel", "friend"],
+    "bio": "Travel companion from a Japan trip who loves planning new adventures.",
+    "goal": 18,
+    "next_due_date": "Aug 20, 2026"
+  }
+]

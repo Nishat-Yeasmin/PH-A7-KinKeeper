@@ -8,14 +8,21 @@ import Home from './Pages/Home/Home'
 import Timeline from './Pages/Timeline/Timeline'
 import States from './Pages/States/States'
 import ErrorPage from './Pages/ErrorPage/ErrorPage'
+import HomePage from './Pages/HomePage/HomePage'
+import FriendDetails from './Pages/FriendDetails/FriendDetails'
+
 
 const router = createBrowserRouter([{
   path: '/',
   element: <MainLayout/>,
   children: [
+    // {
+    //   index: true,
+    //   element: <Home/>
+    // },
     {
-      index: true,
-      element: <Home/>
+      index:true,
+      element: <HomePage/>
     },
     {
       path: "/timeline",
@@ -24,6 +31,11 @@ const router = createBrowserRouter([{
     {
       path: "/states",
       element: <States/>
+    },
+    {
+      path: "/friendDetails/:id",
+      Component: FriendDetails,
+      loader: () => fetch("/friendsData.json"),
     },
     {
       path: "*",

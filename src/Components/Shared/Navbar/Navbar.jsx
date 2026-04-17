@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm ">
   <div className="navbar-start">
     <div className="dropdown">
      
@@ -14,7 +14,7 @@ const Navbar = () => {
      <img className='ml-15' src={logo} alt="logo" />
   </div>
   
-  <div className=" navbar-end flex gap-3 mr-8">
+  <div className=" navbar-end flex gap-3 mr-8 ">
    <ul className="flex gap-3 list-none m-0 p-0">
     <li>
         <NavLink to={"/"} className={({isActive})=> `font-semibold ${isActive ? 'text-white bg-green-950 btn' : ''}`}>Home</NavLink>
