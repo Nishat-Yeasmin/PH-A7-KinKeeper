@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+
 import { useLoaderData, useParams } from 'react-router';
 import call from '../../../public/image/call.png';
 import text from '../../../public/image/text.png';
@@ -8,13 +8,13 @@ import video from '../../../public/image/video.png'
 
 const FriendDetails = () => {
     const { id } = useParams();
-    console.log(id,"id");
+    // console.log(id,"id");
 
     
     const friends = useLoaderData();
-    console.log(friends,"friends");
+    // console.log(friends,"friends");
     const expectedFriend = friends.find(friend => friend.id == id);
-    console.log(expectedFriend,"expectedFriend");
+    // console.log(expectedFriend,"expectedFriend");
 
     const statusColor =
                   expectedFriend.status === "Overdue" ? "bg-red-400 text-white" :
@@ -22,6 +22,27 @@ const FriendDetails = () => {
                   "bg-green-900 text-white"
                   :
                   expectedFriend.status === "Almost Due" ? "bg-yellow-500 text-white" : "bg-gray-500 text-white";
+
+                  //Timeline added
+                  const handleAddTimeline = (type) => {
+                    const newActivity = {
+                        id: Date.now(),
+                        friendId: expectedFriend.id,
+                        name: expectedFriend.name,
+                        date: new Date().toLocaleDateString(),
+                        type: type
+                    };
+
+                    // Old Data
+                    const existingData = JSON.parse(localStorage.getItem("timelineData")) || [];
+
+                    // New DAta
+
+                    const updatedData = [newActivity, ...existingData];
+
+                    //save
+                    localStorage.setItem("timelineData", JSON.stringify(updatedData));
+                  };
     return (
         <div className='w-11/12 mx-auto flex gap-4'>
            {/* left side */}
@@ -61,12 +82,12 @@ const FriendDetails = () => {
            
            {/* bronge */}
            <div  className='card bg-white  flex flex-col items-center mt-7 mb-7 shadow-md p-2'>
-             <p>Snooze 2 weeks</p>
+              <button className='btn font-semibold '>Snooze 2 weeks</button>
            </div>
 
            {/* archive */}
            <div  className='card bg-white  flex flex-col items-center mt-7 mb-7 shadow-md p-2 '>
-            <p>Archive</p>
+            <button className='btn font-semibold'>Archive</button>
            </div>
         {/* delete */}
         <div  className='card bg-white  flex flex-col items-center mt-7 mb-7 shadow-md p-2'>
@@ -114,15 +135,15 @@ const FriendDetails = () => {
             <div className='card grid grid-cols-1 lg:grid-cols-3'>
                 <div className='card shadow-sm p-3 m-3 flex flex-col items-center'>
                     <img className='w-[30px] ' src={call}alt="" />
-                    <button className='text-gray-500 font-bold'>Call</button>
+                    <button onClick={()=>handleAddTimeline("Call")} className='text-gray-500 font-bold btn '>Call</button>
                 </div>
                 <div  className='card shadow-sm p-3 m-3 flex flex-col items-center'>
                     <img className='w-[30px] ' src={text} alt="" />
-                    <button className='text-gray-500 font-bold'>Text</button>
+                    <button onClick={()=>handleAddTimeline("Text")} className='text-gray-500 btn font-bold'>Text</button>
                 </div>
                 <div  className='card shadow-sm p-3 m-3 flex flex-col items-center'>
                     <img className='w-[30px] ' src={video}alt="" />
-                    <button className='text-gray-500 font-bold'>Video</button>
+                    <button onClick={()=>handleAddTimeline("Video")} className='btn text-gray-500 font-bold'>Video</button>
                 </div>
             </div>
            </div>
