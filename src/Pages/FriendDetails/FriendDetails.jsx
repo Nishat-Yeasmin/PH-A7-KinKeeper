@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router';
 import call from '../../../public/image/call.png';
 import text from '../../../public/image/text.png';
 import video from '../../../public/image/video.png'
+import { toast } from 'react-toastify';
 
 // const friendsPromise = fetch('friendsData.json').then(res=>res.json());
 
@@ -24,7 +25,19 @@ const FriendDetails = () => {
                   expectedFriend.status === "Almost Due" ? "bg-yellow-500 text-white" : "bg-gray-500 text-white";
 
                   //Timeline added
-                  const handleAddTimeline = (type) => {
+                  const handleAddTimeline = (type) => { 
+                    if(type === "Call")
+                    {
+                        toast.success("Call added successfully!");
+                    }
+                    else if(type === "Text")
+                    {
+                        toast.success("Text added successfully!");
+                    }
+                    else if(type === "Video")
+                    {
+                        toast.success("Video added successfully!");
+                    }
                     const newActivity = {
                         id: Date.now(),
                         friendId: expectedFriend.id,

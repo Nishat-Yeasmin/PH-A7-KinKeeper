@@ -10,8 +10,8 @@ import States from './Pages/States/States'
 import ErrorPage from './Pages/ErrorPage/ErrorPage'
 import HomePage from './Pages/HomePage/HomePage'
 import FriendDetails from './Pages/FriendDetails/FriendDetails'
-
-
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 const router = createBrowserRouter([{
   path: '/',
   element: <MainLayout/>,
@@ -47,5 +47,7 @@ const router = createBrowserRouter([{
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />,
   </StrictMode>,
+   
 )
