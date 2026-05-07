@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
+import { PieChart, Pie, Cell, Tooltip, Legend,ResponsiveContainer } from 'recharts';
 const States = () => {
 
     const [timelineData, setTimelineData] = useState([]);
@@ -37,21 +37,22 @@ const States = () => {
   const COLORS = ["#7C3AED", "#14532D", "#16A34A"];
 
   return (
-    <div className="w-11/12 mx-auto mt-10">
-      <h1 className="text-4xl font-bold mb-6">
+    <div className="w-11/12 mx-auto mt-6 md:mt-10">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-center md:text-left">
         Friendship Analytics
       </h1>
 
       <div className="bg-white p-6 rounded-xl shadow-md mb-6">
-        <h2 className="text-lg font-semibold mb-4 text-green-800">
+        <h2 className="text-base sm:text-lg md:text-xl font-semibold mb-4 text-green-800">
           By Interaction Type
         </h2>
 
         {timelineData.length === 0 ? (
           <p className="text-gray-500">No data available</p>
         ) : (
-          <div className="flex justify-center">
-            <PieChart width={350} height={350}>
+          <div className="w-full h-[320px] sm:h-[400px] md:h-[450px]">
+             <ResponsiveContainer width="100%" height="100%">
+            <PieChart>
               <Pie
                 data={data}
                 cx="50%"
@@ -60,6 +61,7 @@ const States = () => {
                 outerRadius={110}
                 paddingAngle={6}
                 dataKey="value"
+                label
               >
                 {data.map((entry, index) => (
                   <Cell key={index} fill={COLORS[index]} />
@@ -67,8 +69,11 @@ const States = () => {
               </Pie>
 
               <Tooltip />
-              <Legend verticalAlign="bottom" />
+              <Legend verticalAlign="bottom"
+              height={36}
+              wrapperStyle={{fontSize: "14px"}} />
             </PieChart>
+            </ResponsiveContainer>
           </div>
         )}
       </div>
