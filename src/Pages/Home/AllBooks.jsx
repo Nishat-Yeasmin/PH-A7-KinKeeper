@@ -1,10 +1,29 @@
 import React, { use } from 'react';
+import {useEffect, useState} from 'react';
 import FriendCard from '../../Components/UI/FriendCard';
 
-const friendsPromise = fetch('friendsData.json').then(res=>res.json());
+
 const AllBooks = () => {
-    const friends = use(friendsPromise);
-    console.log(friends,"friends");
+  
+     const [friends, setFriends] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("friendsData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setFriends(data);
+        setLoading(false);
+      });
+  }, []);
+
+   if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <span className="loading loading-dots loading-xl"></span>
+      </div>
+    );
+  }
     return (
         <div className='my-12 '>
             <h2 className='font-bold text-3xl text-center mb-10'>Your friends</h2>
